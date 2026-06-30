@@ -31,9 +31,6 @@ class Libgit2AT15 < Formula
     mkdir "build" do
       system "cmake", "..", *args
       system "make", "install"
-      cd "examples" do
-        (pkgshare/"examples").install "lg2"
-      end
       system "make", "clean"
       system "cmake", "..", "-DBUILD_SHARED_LIBS=OFF", *args
       system "make"
