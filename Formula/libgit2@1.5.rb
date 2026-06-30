@@ -24,7 +24,7 @@ class Libgit2AT15 < Formula
 
   def install
     args = std_cmake_args
-    args << "-DBUILD_EXAMPLES=YES"
+    args << "-DBUILD_EXAMPLES=OFF"
     args << "-DBUILD_TESTS=OFF" # Don't build tests.
     args << "-DUSE_SSH=YES"
 
