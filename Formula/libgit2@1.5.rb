@@ -17,6 +17,11 @@ class Libgit2AT15 < Formula
   depends_on "pkg-config" => :build
   depends_on "libssh2"
 
+  on_linux do
+    depends_on "openssl@3" # Uses SecureTransport on macOS
+    depends_on "zlib-ng-compat"
+  end
+
   def install
     args = std_cmake_args
     args << "-DBUILD_EXAMPLES=YES"
