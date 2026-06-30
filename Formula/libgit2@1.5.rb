@@ -11,6 +11,13 @@ class Libgit2AT15 < Formula
     strategy :github_latest
   end
 
+  bottle do
+    root_url "https://github.com/jacktonkin/homebrew-tap/releases/download/libgit2@1.5-1.5.2"
+    sha256 cellar: :any, arm64_tahoe:  "efb7ecba96beb2c527af4b857c5ba1531c4fc8f97188d12b099ee59500de7e35"
+    sha256 cellar: :any, sequoia:      "e53e4cec0cedf91f0c187f2cb3f99d8b6ccf0a85e8b55c93eef293313d039fe5"
+    sha256 cellar: :any, x86_64_linux: "c50a7bb65809c7c17f93f67cd084b401da90827a2930b1abbf959d8a8139c2cb"
+  end
+
   keg_only :versioned_formula
 
   depends_on "cmake" => :build
